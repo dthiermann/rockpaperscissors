@@ -9,6 +9,8 @@ function computerPlay() {
   }
 }
 
+function playRound(playerSelection, computerSelection) {
+  
 console.log(computerPlay())
 console.log(computerPlay())
 console.log(computerPlay())
