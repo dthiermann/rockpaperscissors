@@ -1,15 +1,32 @@
 function computerPlay() {
-  let choice = Math.floor(3*Math.random())
-  if (choice == 0) {
-    return "Rock";
-  } else if (choice == 1) {
-    return "Paper";
-  } else if (choice == 2) {
-    return "Scissors";
+  return Math.floor(3*Math.random())
+}
+
+function convertPlayerSelection(rawPlayerSelection) {
+  let rawPlayerSelection = rawPlayerSelection.toLowerCase()
+  if (rawPlayerSelection == "rock") {
+    return 0;
+  }
+  else if (rawPlayerSelection == "paper") {
+    return 1;
+  }
+  else if (rawPlayerSelection == "scissors") {
+    return 2;
+  }
+  
+
+function playRound(playerSelection, computerSelection) {
+  if ((playerSelection + 1) % 3 == computerSelection) {
+    return "Computer Wins"
+  }
+  else if (playerSelection == computerSelection) {
+    return "Tie"
+  }
+  else {
+    return "Player Wins"
   }
 }
 
-function playRound(playerSelection, computerSelection) {
   
 console.log(computerPlay())
 console.log(computerPlay())
