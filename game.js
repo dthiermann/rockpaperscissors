@@ -3,7 +3,7 @@ function computerPlay() {
 }
 
 function convertPlayerSelection(rawPlayerSelection) {
-  let rawPlayerSelection = rawPlayerSelection.toLowerCase()
+  rawPlayerSelection = rawPlayerSelection.toLowerCase()
   if (rawPlayerSelection == "rock") {
     return 0;
   }
