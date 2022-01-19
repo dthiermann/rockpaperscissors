@@ -28,8 +28,9 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-let playerChoice = "Rock"
-let computerChoice = computerPlay()
+function game() {
+  let playerChoice = prompt("Make your choice");
+  let computerChoice = computerPlay();
 
-console.log(computerChoice)
-console.log(playRound(playerChoice, computerChoice))
+  playRound(playerChoice, computerChoice);
+}
