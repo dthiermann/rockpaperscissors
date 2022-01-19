@@ -28,7 +28,8 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-  
-console.log(computerPlay())
-console.log(computerPlay())
-console.log(computerPlay())
+let playerChoice = "Rock"
+let computerChoice = computerPlay()
+
+console.log(computerChoice)
+console.log(playRound(playerChoice, computerChoice))
