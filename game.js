@@ -13,6 +13,7 @@ function convertPlayerSelection(rawPlayerSelection) {
   else if (rawPlayerSelection == "scissors") {
     return 2;
   }
+}
   
 
 function playRound(playerSelection, computerSelection) {
