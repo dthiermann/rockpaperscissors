@@ -34,3 +34,5 @@ function game() {
 
   playRound(playerChoice, computerChoice);
 }
+
+game();
