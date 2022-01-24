@@ -1,3 +1,9 @@
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+  button.addEventListener('click', playRound(button.id, computerPlay()));
+})
+
+
 function computerPlay() {
   return Math.floor(3*Math.random())
 }
@@ -29,10 +35,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-  let playerChoice = prompt("Make your choice");
-  let computerChoice = computerPlay();
 
-  playRound(playerChoice, computerChoice);
+  console.log(playRound(playerChoice, computerChoice));
 }
 
 game();
