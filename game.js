@@ -1,10 +1,14 @@
-const buttons = document.querySelectorAll('button');
+let choices = ['rock', 'paper', 'scissors']
+
+let buttons = document.querySelectorAll('button');
+let displayComputerChoice = document.querySelector('#displayComputerChoice');
 
 let response = function() {
-  const result = document.querySelector('#result');
-  result.textContent = playRound(self.id, computerPlay());
+  let result = document.querySelector('#result');
+  let computerChoice = computerPlay();
+  displayComputerChoice.textContent = choices[computerChoice];
+  result.textContent = playRound(this.id, computerChoice);
 }
-
 
 
 buttons.forEach((button) => {
@@ -42,3 +46,4 @@ function playRound(playerSelection, computerSelection) {
     return "Player Wins"
   }
 }
+
