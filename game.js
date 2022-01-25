@@ -1,7 +1,16 @@
 const buttons = document.querySelectorAll('button');
+
+let response = function() {
+  const result = document.querySelector('#result');
+  result.textContent = playRound(self.id, computerPlay());
+}
+
+
+
 buttons.forEach((button) => {
-  button.addEventListener('click', playRound(button.id, computerPlay()));
+  button.addEventListener('click', response);
 })
+
 
 
 function computerPlay() {
@@ -33,10 +42,3 @@ function playRound(playerSelection, computerSelection) {
     return "Player Wins"
   }
 }
-
-function game() {
-
-  console.log(playRound(playerChoice, computerChoice));
-}
-
-game();
